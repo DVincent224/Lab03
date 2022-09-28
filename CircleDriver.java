@@ -4,8 +4,14 @@ public class CircleDriver
   public static void main(String[] args) 
   {
     Scanner stdIn = new Scanner(System.in);
+
+    System.out.println("Initial Instance: " + Circle.getInstance());
+
     Circle big = new Circle();  
     Circle small = new Circle();
+
+    System.out.println("New Instance: " + Circle.getInstance());
+
     System.out.println("");
     System.out.print("Big : ");
     big.print();
@@ -43,5 +49,7 @@ public class CircleDriver
     else
       System.out.println(" bigCopy does not equals big ");
     System.out.println("");  
+
+    System.out.println("Final Instance: " + Circle.getInstance());
   }
 }

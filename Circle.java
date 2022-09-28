@@ -4,24 +4,24 @@ public class Circle
   private static int instance;
 
   public Circle(){
-    this(1.0, 1)
+    this(1.0);
   }
 
-  public Circle(double radius, int instance){
+  public Circle(double radius){
     this.setRadius(radius);
-    this.setInstance(instance);
+    setInstance();
   }
 
   public Circle(Circle copy){
-    this(copy.getRadius(),copy.getInstance());
+    this(copy.getRadius());
   }
 
-  public int getInstance(){
-    return this.instance;
+  public static int getInstance(){
+    return instance;
   }
 
-  private void setInstance(int instance){
-    this.instance = instance;
+  private static void setInstance(){
+    instance += 1;
   }
   public double getRadius()
   {
